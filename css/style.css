@@ -1,0 +1,493 @@
+@charset 'UTF-8';
+
+:root{
+    --cor0:#2A2F35;
+    --cor1:#FF6335;
+    --cor2:#F3F3F3;
+    --cor3:#11161C;
+    --cor4:#aaa;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: var(--cor2);
+}
+header{
+    background-color: var(--cor0);
+    color: var(--cor2);
+    height: 70px;
+    position: relative;
+}
+#conteiner-header{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1500px;
+    margin: auto;
+    min-height: 70px;
+    position: relative;
+    z-index: 50;
+}
+#logo{
+    display: flex;
+    align-items: center;
+}
+#logo > img{
+    width: 50px;
+    z-index: 3;
+}
+#conteiner-header > p{
+    margin-left: 20px;
+    font-size: 16pt;
+    text-transform: uppercase;
+    z-index: 3;
+}
+#esconder{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor0);
+}
+.menu{
+    display: flex;
+    align-items: center;
+    margin-left: auto ;
+    position: relative;
+}
+label[for='botao-menu']{
+    background-color: var(--cor0);
+    color: var(--cor2);
+    font-size: 30px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: auto;
+    display: none;
+    position: relative;
+}
+.navItens{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: var(--cor0);
+    position: relative;          
+}
+.navItens > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;      
+    color:var(--cor4);
+    height: 68px;
+    width: 100%;
+    min-width: 130px;
+    padding-bottom: 2px;
+}
+.navItens > a:hover{
+    background-color: var(--cor3);
+    transition:all .4s;
+}
+.navItens > a:nth-child(1):hover{
+    box-shadow: inset 0 3px 0 var(--cor1);
+}
+.navItens > a:visited{
+    color: var(--cor2)
+}
+.submenu{
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .4s ease-out;
+}
+.submenu > .navItens > a{
+    background-color:var(--cor3);
+    box-shadow: inset 0 2px 0 var(--cor4);
+}
+.submenu > .navItens > a:hover{    
+    background-color: var(--cor3);
+    transition:all .4s;    
+}
+.navItens:hover .submenu{
+    max-height: 200px; 
+    transition: max-height .4s ease-in;
+}
+#imageBackground{
+    width: 100%;
+    height: 480px ;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../imagens/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#textoBackground{
+    color: var(--cor2);
+    text-align: center;
+    max-width: 1500px; /*aqui*/
+}
+
+#textoBackground > p:nth-child(2n + 1){
+    font-weight: lighter;  
+    font-size: 24px;      
+}
+#textoBackground > p:nth-of-type(2){ /*p~p*/
+    font-size: 50px;
+    text-transform: uppercase;
+    border-top: 2px solid var(--cor2);
+    border-bottom: 2px solid var(--cor2);   
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px 10px 15px 10px;   
+}
+main{
+    top: -50px;
+    width: 80%;
+    max-width: 1500px; /*aqui*/    
+    margin: auto;
+    background-color: white;
+    position: relative;
+    border-top: 3px solid var(--cor1);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+.section-services{
+    border-top: 4px solid var(--cor2);
+    margin: 30px auto 50px auto;
+    max-width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.titulo-services, .titulo-works{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.titulo-services > h1, .titulo-works > h1, #blog > h1, #section-depoimentos > h1{
+    font-weight: lighter;
+    font-size: xx-large;
+    color: var(--cor4);
+}
+.titulo-services > h2{
+    font-size: 12pt;
+}
+.titulo-services > img{
+    margin-right: 10px;
+}
+.conteudo-services{
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+    margin: 20px 28px 0px 28px;
+    text-align: justify;
+    height: 268px;
+    position: relative;
+}
+.conteudo-services img{
+    width: 50px;
+}
+.section-botao{
+    text-decoration: none;
+    color: var(--cor2);
+    background-color: var(--cor3);
+    padding: 10px 20px;
+    width: 80px;
+    border-radius: 2px;
+    display: flex;   
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.section-works{
+    border-top: 4px solid var(--cor2);
+    margin: 30px auto 50px auto;
+    max-width: 95%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.conteudo-works{
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+    margin: 20px 28px 0px 28px;
+    text-align: justify;
+    height: 268px;
+    position: relative;
+}
+#works-slide{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+.works-imagens{
+    max-width: 300px;
+    min-width: 300px;
+    height: 186px;
+    margin: 20px 28px 0px 28px;
+    overflow: hidden;
+    position: relative;
+}
+.works-imagens > img{
+    width: 100%;
+}
+.works-imagens-hover{
+    background-color: rgba(0, 0, 0, 0.404);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    color: var(--cor2);    
+    display: none;
+}
+.conteiner-links-hover{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+#links-hover-1, #links-hover-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--cor3);
+}
+#links-hover-1:hover, #links-hover-2:hover{
+    background-color: var(--cor1);
+}
+#links-hover-1 > img{
+    width: 20px;
+}
+#links-hover-2 > img{
+    width: 30px;
+}
+.works-imagens:hover > div{
+    display: flex;
+}
+#botoes{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 28px;
+}
+#bt-esq, #bt-dir{
+    background-color: var(--cor3);
+    color: var(--cor2);
+    font-size: large;
+    padding: 5px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+#bt-esq:hover, #bt-dir:hover{
+    background-color: var(--cor1);
+}
+@media(max-width: 1890px){
+    #works-slide{
+        width: 712px;
+    }
+}
+@media(max-width: 1422px){
+    #works-slide{
+        width: 356px;
+    }
+}
+@media(max-width: 952px){
+    .section-works{
+        flex-wrap: wrap;
+    }
+    #botoes{
+        right: 20%;
+    }
+}
+#conteiner-blog-depoimentos{
+    border-top: 4px solid var(--cor2);
+    margin: 30px auto 50px auto;
+    max-width: 95%;
+    display: flex;
+    position: relative;
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+#blog{
+    width: 656px;
+    margin: 20px 28px 0px 28px;
+}
+.blog-imagem-post{
+    display: flex;
+    flex-direction: row;
+}
+.blog-imagem-post:nth-of-type(2){
+    border-top: 4px solid var(--cor2);
+    padding-top: 15px;
+    margin-top: 15px;
+}
+#img-blog-1{
+    width: 300px;
+    background-image: url(../imagens/pexels-andy-fotheringham-8376799.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+}
+#img-blog-2{    
+    width: 300px;
+    background-image: url(../imagens/pexels-andy-fotheringham-8376799.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+}
+.conteiner-titulo-subtitulo{
+    display: flex; 
+    justify-content: space-between;  
+    align-items: center; 
+}
+.post-subtitulo{
+    font-size: 7pt;
+    color: var(--cor1);
+}
+.post-texto{
+    text-align: justify;
+}
+.post-texto > a:link{
+    color: var(--cor3)
+}
+.post-texto > a:hover{
+    color: var(--cor1);
+}
+#section-depoimentos{
+    width: 656px;
+    margin: 20px 28px 0px 28px;
+}
+#conteiner-depoimentos{
+    display: flex;
+    height: calc(100% - 42px);
+    /* flex-wrap: wrap; */
+}
+.depoimentos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.depoimentos > p{
+    text-align: center;
+}
+.conteiner-autor{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--cor2);
+    padding: 5px;
+}
+#img-autor-1{
+    height: 80px;
+    width: 80px;
+    background-image: url(../imagens/woman-g4e74e90e0_1920.jpg);
+    background-size: cover;
+    margin-right: 10px;  
+}
+#img-autor-2{
+    height: 80px;
+    width: 80px;;
+    background-image: url(../imagens/asian-man-ga756bad9a_1920.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-right: 10px;    
+}
+.nome-autor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer{
+    background-color: var(--cor0);
+    color: var(--cor2);
+    border-top: 4px solid var(--cor1);
+}
+#conteiner-footer{
+    max-width: 95%;
+    margin: 30px auto 50px auto;
+}
+#conteiner-footer-itens{
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+    flex-wrap: wrap;
+}
+.footer-itens{
+
+}
+#conteiner-footer-nav-copy{
+    display: flex;
+    justify-content: space-between;
+    border-top: 4px solid var(--cor4);
+    height: 70px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media (max-width: 1230px){
+    #conteiner-footer-nav-copy{
+        justify-content: center;
+    }
+}
+#footer-nav > ul{
+    display: flex;
+    list-style: none;
+}
+#footer-nav li{
+    margin-right: 10px;
+}
+#footer-nav a{
+    text-decoration: none;
+    color: var(--cor2);
+}
+#footer-copy{
+
+}
+#footer-copy span{
+    color: var(--cor1);
+}
+@media (max-width: 1220px){
+    #esconder{
+        z-index: 2;
+    }
+    .menu{
+        top: -400%;
+        transition: all .9s;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+    label[for='botao-menu']{
+        display: block;
+        z-index: 9999;
+    }
+    .active{
+        top: 70px;
+    }
+    .submenu{
+        position: relative;
+    }
+}
