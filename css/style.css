@@ -162,14 +162,16 @@ main{
     position: relative;
     border-top: 3px solid var(--cor1);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
 }
 .section-services{
     border-top: 4px solid var(--cor2);
     margin: 30px auto 40px auto;
     max-width: 95%;
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 25px;
 }
 .titulo-services, .titulo-works{
     display: flex;
