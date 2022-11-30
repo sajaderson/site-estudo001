@@ -197,7 +197,7 @@ main{
     position: relative;      
     /* Isso torna as divs flexíveis, consequentemente os textos também.*/
     flex-grow: 1;
-    flex-basis: 270px;
+    flex-basis: 200px;
 }
 .conteudo-services > p{
     font-size: 1rem;

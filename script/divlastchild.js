@@ -18,5 +18,7 @@ window.addEventListener('resize', function(){
 
     if(larguraresize == largurainial){
         divlastchild.style.width = propriedadeinicial
+        /* divlastchild.style.flexGrow = 1
+        divlastchild.style.flexBasis = '200px'; */
     }
 })
