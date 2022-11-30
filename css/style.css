@@ -156,20 +156,21 @@ label[for='botao-menu']{
 main{
     top: -50px;
     width: 80%;
-    max-width: 1500px; /*aqui*/    
+    max-width: 1500px;   
     margin: auto;
     background-color: white;
     position: relative;
     border-top: 3px solid var(--cor1);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .section-services{
     border-top: 4px solid var(--cor2);
     margin: 30px auto 40px auto;
+    width: 95%;
     max-width: 95%;
-    display: inline-flex;
-    justify-content: space-between;
+    display: flex;
     flex-wrap: wrap;
     gap: 25px;
 }
@@ -191,16 +192,12 @@ main{
     margin-right: 10px;
 }
 .conteudo-services{
-    width: 270px;
-    max-width: 270px;
     margin-top: 40px;
     text-align: justify;
-    position: relative;
-}
-@media(max-width: 710px){
-    .section-services{
-        justify-content: center;
-    }
+    position: relative;      
+    /* Isso torna as divs flexíveis, consequentemente os textos também.*/
+    flex-grow: 1;
+    flex-basis: 270px;
 }
 .conteudo-services > p{
     font-size: 1rem;
