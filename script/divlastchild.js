@@ -1,24 +1,17 @@
-var elemento = document.getElementsByClassName('conteudo-services')[0]
-var propriedadeinicial = window.getComputedStyle(elemento).getPropertyValue('width')
-var divlastchild = document.querySelector('.conteudo-services:last-child')
-divlastchild.style.flexGrow = 0
-divlastchild.style.flexBasis = 'auto';
-divlastchild.style.width = propriedadeinicial
-
-var body = document.body
-var largurainial = body.clientWidth
-
-window.addEventListener('resize', function(){
-    var propriedaderesize = window.getComputedStyle(elemento).getPropertyValue('width')
-    divlastchild.style.width = propriedaderesize
+window.addEventListener('resize', function(){     
+    var divI = document.getElementById('divI')
+    var divF = document.getElementById('divF')   
+    var ldivI = window.getComputedStyle(divI).getPropertyValue('width')
     
-    //var browserZoomLevel = Math.round(window.devicePixelRatio * 100); // mostra o nivel do Zoom
-    body = document.body
-    var larguraresize = body.clientWidth
+    var rect1 = divI.getBoundingClientRect()
+    var rect2 = divF.getBoundingClientRect()
 
-    if(larguraresize == largurainial){
-        divlastchild.style.width = propriedadeinicial
-        /* divlastchild.style.flexGrow = 1
-        divlastchild.style.flexBasis = '200px'; */
+    if(rect2.top != rect1.top){
+        divF.style.flexBasis = 'auto'
+        divF.style.flexGrow = 0
+        divF.style.width = ldivI
+    }else{
+        divF.style.flexBasis = '200px'
+        divF.style.flexGrow = 1
     }
 })
