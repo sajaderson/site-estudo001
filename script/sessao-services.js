@@ -1,4 +1,4 @@
-window.addEventListener('resize', function(){     
+var detectWrap = function (event){
     var divI = document.getElementById('divI')
     var divF = document.getElementById('divF')   
     var ldivI = window.getComputedStyle(divI).getPropertyValue('width')
@@ -14,4 +14,6 @@ window.addEventListener('resize', function(){
         divF.style.flexBasis = '200px'
         divF.style.flexGrow = 1
     }
-})
+}
+window.addEventListener('load', detectWrap, false)
+window.addEventListener('resize', detectWrap, false)

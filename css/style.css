@@ -163,9 +163,10 @@ main{
     border-top: 3px solid var(--cor1);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
-#section-services{
+.section-services{
     border-top: 4px solid var(--cor2);
     margin: 30px auto 40px auto;
     width: 95%;
@@ -227,40 +228,38 @@ main{
     margin-top: 20px;
     position: relative;
 }
-.section-works{
+#section-works{
     border-top: 4px solid var(--cor2);
     margin: 30px auto 50px auto;
+    width: 95%;
     max-width: 95%;
     display: flex;
-    position: relative;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 .conteudo-works{
-    width: 300px;
-    max-width: 300px;
-    min-width: 300px;
-    margin: 20px 28px 0px 28px;
+    margin-top: 40px;
     text-align: justify;
-    height: 268px;
     position: relative;
+    flex-grow: 1;
+    flex-basis: 200px;
 }
 #works-slide{
+    flex-grow: 1;
+    flex-basis: 200px;
     display: flex;
-    overflow: hidden;
-    position: relative;
+    gap: 25px;
 }
 .works-imagens{
-    max-width: 300px;
-    min-width: 300px;
-    height: 186px;
-    margin: 20px 28px 0px 28px;
-    overflow: hidden;
-    position: relative;
+    margin-top: 40px;
+    /* width: SCRIPT*/
+    flex-grow: 1;
+    flex-basis: 200px;
 }
-.works-imagens > img{
+/* .works-imagens > img{
     width: 100%;
-}
-.works-imagens-hover{
+} */
+/* .works-imagens-hover{
     background-color: rgba(0, 0, 0, 0.404);
     position: absolute;
     width: 100%;
@@ -272,8 +271,8 @@ main{
     justify-content: space-around;
     color: var(--cor2);    
     display: none;
-}
-.conteiner-links-hover{
+} */
+/* .conteiner-links-hover{
     display: flex;
     width: 30%;
     justify-content: space-around;
@@ -316,8 +315,8 @@ main{
 }
 #bt-esq:hover, #bt-dir:hover{
     background-color: var(--cor1);
-}
-@media(max-width: 1890px){
+} */
+/* @media(max-width: 1890px){
     #works-slide{
         width: 712px;
     }
@@ -334,8 +333,8 @@ main{
     #botoes{
         right: 20%;
     }
-}
-#conteiner-blog-depoimentos{
+} */
+/* #conteiner-blog-depoimentos{
     border-top: 4px solid var(--cor2);
     margin: 30px auto 50px auto;
     max-width: 95%;
@@ -398,7 +397,6 @@ main{
 #conteiner-depoimentos{
     display: flex;
     height: calc(100% - 42px);
-    /* flex-wrap: wrap; */
 }
 .depoimentos{
     display: flex;
@@ -477,8 +475,8 @@ footer{
 
 #footer-copy span{
     color: var(--cor1);
-}
-@media (max-width: 1220px){
+} */
+/* @media (max-width: 1220px){
     #esconder{
         z-index: 2;
     }
@@ -500,4 +498,4 @@ footer{
     .submenu{
         position: relative;
     }
-}
+} */
