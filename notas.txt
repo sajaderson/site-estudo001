@@ -1,0 +1,66 @@
+<!-- <div class="works-imagens-hover">
+                        <h2>Lorem Title</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, beatae!</p>
+                        <div class="conteiner-links-hover">
+                            <div id="links-hover-1"><img src="imagens/anuncio-link.png" alt=""></div>
+                            <div id="links-hover-2"><img src="imagens/1200px-VisualEditor_-_Icon_-_Search-big_-_white.svg.png" alt=""></div>
+                        </div>
+                    </div> -->
+
+
+                    <div id="works-imagens1"></div>
+                <div id="works-imagens2"></div>
+                <div id="works-imagens3"></div> 
+                <div id="works-imagens4"></div>
+                <div id="works-imagens5"></div>
+                <div id="works-imagens6"></div>  
+
+
+                #works-imagens1{
+    flex-shrink: 0;
+    margin-top: 40px;
+    background-image: url(../imagens/imagem1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#works-imagens2{
+    flex-shrink: 0;
+    margin-top: 40px;
+    background-image: url(../imagens/imagem2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#works-imagens3{
+    flex-shrink: 0;
+    margin-top: 40px;
+    background-image: url(../imagens/imagem3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#works-imagens4{
+    flex-shrink: 0;
+    margin-top: 40px;
+    background-image: url(../imagens/imagem4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#works-imagens5{
+    flex-shrink: 0;
+    margin-top: 40px;
+    background-image: url(../imagens/imagem5.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#works-imagens6{
+    flex-shrink: 0;
+    margin-top: 40px;
+    background-image: url(../imagens/imagem6.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
